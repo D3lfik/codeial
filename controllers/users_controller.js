@@ -73,4 +73,4 @@ module.exports.destroySession = async function(req, res) {
   });
 
   return res.redirect('/');
-}
+} 
