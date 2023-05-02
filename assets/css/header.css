@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b1b1b;
+  padding: 20px; }
+  header .logo {
+    font-size: 24px;
+    color: #fff; }
+  header .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; }
+  header .nav-list li {
+    margin-left: 20px; }
+  header .nav-list li:first-child {
+    margin-left: 0; }
+  header .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; }
+  header .nav-list li a:hover {
+    text-decoration: underline; }
