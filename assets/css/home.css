@@ -1,0 +1,55 @@
+#home-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px; }
+  #home-container #feed-posts,
+  #home-container #user-friends {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px; }
+    #home-container #feed-posts h4,
+    #home-container #user-friends h4 {
+      font-size: 20px;
+      margin-bottom: 10px; }
+    #home-container #feed-posts ul,
+    #home-container #user-friends ul {
+      list-style-type: none;
+      padding: 0; }
+      #home-container #feed-posts ul li,
+      #home-container #user-friends ul li {
+        margin-bottom: 10px; }
+        #home-container #feed-posts ul li:last-child,
+        #home-container #user-friends ul li:last-child {
+          margin-bottom: 0; }
+  #home-container #feed-posts {
+    flex: 2; }
+    #home-container #feed-posts #new-post-form {
+      margin-bottom: 20px; }
+      #home-container #feed-posts #new-post-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical; }
+      #home-container #feed-posts #new-post-form input[type="submit"] {
+        display: block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; }
+    #home-container #feed-posts #posts-list-container {
+      max-height: 300px;
+      overflow-y: auto; }
+  #home-container #user-friends {
+    flex: 1; }
+    #home-container #user-friends p {
+      margin-bottom: 5px; }
+      #home-container #user-friends p a {
+        color: #333;
+        text-decoration: none; }
+        #home-container #user-friends p a:hover {
+          text-decoration: underline; }

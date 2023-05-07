@@ -1,12 +1,14 @@
 <header>
 <div class="logo">
-    Codieal
+    <li>
+   <a href="/">Codieal</a>
+</li>
  </div>
   <nav>
     <ul class="nav-list">
         <% if (locals.user){%>
             <li> 
-                <a href="/users/profile">
+                <a href="/users/profile/<%=user.id%>">
                     <%=user.name%>
                 </a>
            

@@ -5,9 +5,15 @@ header {
   background-color: #1b1b1b;
   padding: 20px;
    
-  .logo {
+  .logo li a {
     font-size: 24px;
     color: #fff;
+    text-decoration: none;
+  
+  }
+  .logo li a:hover{
+    text-decoration: underline;
+
   }
 
   .nav-list {

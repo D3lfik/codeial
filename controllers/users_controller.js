@@ -1,14 +1,42 @@
 const User = require('../models/user');
-
-
-module.exports.profile = function(req, res){
-    // res.end('<h1>User Profile</h1>');
-    return res.render('user_profile',{
-        title:"profile"
+//rendfer profile page
+module.exports.profile = async function(req, res) {
+  try {
+    const user = await User.findById(req.params.id);
     
+    return res.render('user_profile', {
+      title: "Profile",
+      profile_user: user
     });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+};
 
+//update profile 
+module.exports.update = async function(req, res){
+  try {
+    if (req.user.id == req.params.id) {
+      await User.findByIdAndUpdate(req.params.id, req.body);
+      return res.redirect('back');
+    } else {
+      return res.status(401).send('Unauthorized');
+    }
+  } catch (err) {
+    // Handle any errors that occurred during the update process
+    console.error(err);
+    return res.status(500).send('Internal Server Error');
+  }
 }
+
+//about page 
+module.exports.about  = function(req,res){
+  return res.render ('about',{
+    title:"About"
+  });
+}
+
  
 //render the sign up page
 module.exports.signUp = function(req,res){

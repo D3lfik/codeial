@@ -4,9 +4,12 @@ header {
   align-items: center;
   background-color: #1b1b1b;
   padding: 20px; }
-  header .logo {
+  header .logo li a {
     font-size: 24px;
-    color: #fff; }
+    color: #fff;
+    text-decoration: none; }
+  header .logo li a:hover {
+    text-decoration: underline; }
   header .nav-list {
     list-style: none;
     margin: 0;
