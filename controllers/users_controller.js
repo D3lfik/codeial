@@ -84,21 +84,25 @@ module.exports.create = async function(req, res) {
   };
 //sign in and create the session for the user
 module.exports.createSession = function(req,res){
+  req.flash('success',"Logged in Successfully");
     return res.redirect('/');
 }
 
 
 //sign Out 
-module.exports.destroySession = async function(req, res) {
-  await new Promise((resolve, reject) => {
-    req.logout((err) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve();
-      }
-    });
-  });
+const { promisify } = require('util');
 
-  return res.redirect('/');
-} 
+module.exports.destroySession = async function(req, res) {
+  try {
+    const logout = promisify(req.logout).bind(req);
+
+    await logout();
+    req.flash('success', 'You have logged out!');
+    return res.redirect('/');
+  } catch (error) {
+    // Handle any potential errors
+    console.error(error);
+    // Return an error response or redirect to an error page
+    return res.status(500).send('Internal Server Error');
+  }
+};
