@@ -1,4 +1,6 @@
 const User = require('../models/user');
+const fs = require('fs');
+const path = require('path');
 //rendfer profile page
 module.exports.profile = async function(req, res) {
   try {
@@ -18,7 +20,25 @@ module.exports.profile = async function(req, res) {
 module.exports.update = async function(req, res){
   try {
     if (req.user.id == req.params.id) {
-      await User.findByIdAndUpdate(req.params.id, req.body);
+     let user = await User.findByIdAndUpdate(req.params.id);
+      User.uploadedAvatar(req, res, function(err){
+        if (err){console.log('*****Multer Error:',err)}
+        
+        user.name = req.body.name;
+        user.email = req.body.email;
+
+        if (req.file){
+          if (user.avatar){
+            fs.unlinkSync(path.join(__dirname,'..',user.avatar));
+          }
+          
+          
+          //this is the saving of path of uploaded file into avatar field in the user
+          user.avatar  = User.avatarPath + '/' + req.file.filename;
+        }
+        user.save();
+      
+      });
       return res.redirect('back');
     } else {
       return res.status(401).send('Unauthorized');
