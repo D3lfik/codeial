@@ -22,6 +22,8 @@
         #home-container #feed-posts ul li:last-child,
         #home-container #user-friends ul li:last-child {
           margin-bottom: 0; }
+  #home-container .post-comments {
+    margin-left: 20px; }
   #home-container #feed-posts {
     flex: 2; }
     #home-container #feed-posts #new-post-form {

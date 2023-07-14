@@ -1,0 +1,22 @@
+[33mcddd595[m[33m ([m[1;36mHEAD -> [m[1;32mmaster1[m[33m, [m[1;31morigin/master1[m[33m)[m kue set up
+[33mf5e8dc1[m nodemailer with html template rendering
+[33md50215d[m Social Authentication google-oauth2
+[33ma18ca58[m Multer lib file upload
+[33m600dd0e[m Ajax handler making pages dynamic
+[33md401574[m codieal flash with noty api
+[33ma76af83[m codeial phase 1 flash success
+[33me9be650[m Merge branch 'master1' of https://github.com/D3lfik/codeial into master1
+[33m6e5ccc3[m Codieal Devlopment phase 1 completed
+[33mefea5e4[m Create README.md
+[33m94be61f[m sass css updation footer and header
+[33mfa60c43[m[33m ([m[1;32mnode-v18.12.1-codeial[m[33m)[m codeial till SASS , SASS un-support the latest node
+[33mbaf0836[m[33m ([m[1;32mmaster[m[33m)[m AUTHECTICATION using passport.js
+[33m4fa5d25[m AUTHECTICATION using passport.js
+[33mae27995[m pushed data sign up data into database
+[33mc81cf83[m added user sign-in and sign out view
+[33mefb8896[m setup static files access for layuts and pages
+[33mbf75091[m setup static files access for layuts and pages
+[33md4541b2[m add a controller and a router for home
+[33mb8acc12[m add a controller and a router for home
+[33m2936a31[m add a controller and a router for home
+[33m02d948e[m First Commit: create the directory structure and setup express
